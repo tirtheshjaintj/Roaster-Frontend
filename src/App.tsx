@@ -9,7 +9,7 @@ const App: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [roast, setRoast] = useState<string>("");
   const [error, setError] = useState<string>("");
-
+  const BACKEND_URL="https://roaster-backend.vercel.app";
   const handleServiceChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedService(event.target.value as "github" | "leetcode");
   };
@@ -19,7 +19,7 @@ const App: React.FC = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/${selectedService}`, { username });
+      const response = await axios.post(`${BACKEND_URL}/${selectedService}`, { username });
       setRoast(response.data);
       setError("");
       setLoading(false);
