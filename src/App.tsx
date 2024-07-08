@@ -62,9 +62,9 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen min-w-screen text-white flex flex-col justify-center items-center">
+    <div className="min-h-screen min-w-screen text-white flex flex-col md:justify-center items-center">
       <Toaster/>
-      <div className="flex flex-col w-6/7 md:w-1/2 bg-gray-900 p-4 rounded-xl shadow-xl mx-auto pb-8">
+      <div className="flex flex-col w-6/7 md:w-1/2 bg-gray-900 p-4 rounded-xl shadow-xl pb-8">
         <h1 className="text-4xl font-semibold text-center text-white whitespace-pre-wrap my-8">Welcome to CodeRoast 🔥</h1>
         <form onSubmit={handleSubmit} className="mb-4">
           <div className="my-5">
