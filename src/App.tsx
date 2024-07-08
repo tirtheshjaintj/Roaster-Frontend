@@ -61,10 +61,6 @@ const App: React.FC = () => {
     }
   };
 
-  useEffect(()=>{
-   setRoast("");
-  },[username]);
-
   return (
     <div className="min-h-screen min-w-screen text-white flex flex-col justify-center items-center">
       <Toaster/>
