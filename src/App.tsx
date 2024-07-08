@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { toast, Toaster } from "react-hot-toast";
 import RoastDisplay from "./components/RoastDisplay";
@@ -60,6 +60,10 @@ const App: React.FC = () => {
       });
     }
   };
+
+  useEffect(()=>{
+   setRoast("");
+  },[username]);
 
   return (
     <div className="min-h-screen min-w-screen text-white flex flex-col items-center">
